@@ -11,6 +11,7 @@ An intelligent full-stack application that analyzes GitHub repositories and gene
 ## 🎯 Overview
 
 DevOnboard automatically analyzes any GitHub repository and generates:
+
 - **Project Overview** - Clear description of the project's purpose
 - **Tech Stack Detection** - Identifies all technologies and frameworks
 - **Folder Structure Explanation** - Explains the codebase organization
@@ -150,6 +151,7 @@ VITE_APP_NAME=DevOnboard
 ## 🛠️ Technology Stack
 
 ### Backend
+
 - **Flask** - Python web framework
 - **Anthropic Claude** - AI for code analysis
 - **GitPython** - Git repository operations
@@ -157,6 +159,7 @@ VITE_APP_NAME=DevOnboard
 - **Flask-Limiter** - Rate limiting
 
 ### Frontend
+
 - **React 18** - UI library
 - **Vite** - Build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
@@ -199,6 +202,7 @@ npm run preview  # Preview production build
 ### Backend Deployment (Railway/Heroku)
 
 1. **Create a `Procfile`** in the backend directory:
+
    ```
    web: gunicorn app:app
    ```
@@ -237,9 +241,11 @@ npm run preview  # Preview production build
 ## 🎯 API Endpoints
 
 ### `POST /api/analyze`
+
 Analyze a GitHub repository and generate onboarding guide.
 
 **Request:**
+
 ```json
 {
   "repository_url": "https://github.com/username/repo"
@@ -247,6 +253,7 @@ Analyze a GitHub repository and generate onboarding guide.
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -267,9 +274,11 @@ Analyze a GitHub repository and generate onboarding guide.
 ```
 
 ### `GET /api/health`
+
 Health check endpoint.
 
 **Response:**
+
 ```json
 {
   "status": "healthy",
@@ -282,23 +291,29 @@ Health check endpoint.
 ### Backend Issues
 
 **Problem**: `ModuleNotFoundError: No module named 'flask'`
+
 - **Solution**: Activate virtual environment and run `pip install -r requirements.txt`
 
 **Problem**: `anthropic.APIError: Invalid API key`
+
 - **Solution**: Check your `.env` file and ensure `ANTHROPIC_API_KEY` is set correctly
 
 **Problem**: `git.GitCommandError: Failed to clone repository`
+
 - **Solution**: Ensure the repository URL is correct and publicly accessible
 
 ### Frontend Issues
 
 **Problem**: `Failed to fetch` or CORS errors
+
 - **Solution**: Ensure backend is running and `VITE_API_BASE_URL` is correct
 
 **Problem**: `npm ERR! code ENOENT`
+
 - **Solution**: Run `npm install` to install dependencies
 
 **Problem**: Blank page after build
+
 - **Solution**: Check browser console for errors and verify API URL
 
 ## 📈 Performance Optimization
@@ -312,6 +327,7 @@ Health check endpoint.
 ## 🔮 Future Enhancements
 
 ### Phase 2
+
 - [ ] User authentication and saved analyses
 - [ ] Database integration for caching results
 - [ ] Support for private repositories
@@ -319,6 +335,7 @@ Health check endpoint.
 - [ ] Export guides as PDF/Markdown
 
 ### Phase 3
+
 - [ ] Interactive code walkthroughs
 - [ ] Video tutorial generation
 - [ ] Team collaboration features
@@ -345,16 +362,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Anthropic for Claude AI API
+- Anthropic for Claude AI API, Changed to Gemini 2.5 Flash
 - GitHub for repository hosting
 - The open-source community
 
 ## 📞 Support
 
 For issues, questions, or suggestions:
+
 - Open an issue on GitHub
-- Email: your-email@example.com
-- Twitter: @yourhandle
+- Email: irorun757@gmail.com, excelgbadamosi@gmail.com
+- Twitter: @IROR_111, @excelopemipo22
 
 ## 🎉 Hackathon Ready
 
